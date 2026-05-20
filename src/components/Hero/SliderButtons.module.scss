@@ -1,0 +1,11 @@
+.sliderButtons {
+  @apply absolute inset-x-0 top-[48%] z-10 flex w-full items-center justify-between pointer-events-none -translate-y-1/2  h-11 lg:top-1/2 lg:h-14;
+}
+
+.btn {
+  @apply flex items-center justify-center shrink-0 bg-transparent border-none text-white cursor-pointer pointer-events-auto transition-colors duration-200 w-9 h-11 lg:w-20 lg:h-14;
+
+  &:focus-visible {
+    @apply outline outline-2 outline-white outline-offset-[-2px];
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "eyebrow": "Eyebrow",
+  "heading": "Welcome Developer!",
+  "blurb": "Your goal is to translate the provided Figma designs into a living, functional interface. We value pixel-perfection; your output should match the design specifications exactly in terms of colour, spacing, typography, and visual hierarchy.",
+  "buttons": [
+    { "id": 1, "label": "Shop Now", "variant": "primary", "action": "ex1" },
+    { "id": 2, "label": "Discover All", "variant": "secondary", "action": "ex1" }
+  ]
+}

@@ -1,0 +1,30 @@
+.slider {
+  @apply relative w-full overflow-hidden bg-hero-bg
+    aspect-[375/698]
+    lg:aspect-[1920/1080];
+}
+
+.track {
+  @apply flex w-full h-full will-change-transform
+    transition-transform duration-500 ease-in-out;
+}
+
+.noTransition {
+  @apply transition-none;
+}
+.headingOverlay {
+  @apply absolute inset-x-0 bottom-0 z-[5];
+}
+.slide {
+  @apply relative w-full h-full flex-[0_0_100%];
+}
+
+.image {
+  @apply w-full h-full object-cover;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    @apply transition-none;
+  }
+}

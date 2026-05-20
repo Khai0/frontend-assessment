@@ -1,0 +1,45 @@
+{
+  "sectionHeading": "Heading",
+  "products": [
+    {
+      "id": 1,
+      "brandName": "Brand Name",
+      "heading": "Heading",
+      "price": 80.95,
+      "originalPrice": 80.95,
+      "imageDesktop": "/images/product-462x710.webp",
+      "imageMobile": "/images/product-173.5x276.webp",
+      "imageAlt": "Product 1"
+    },
+    {
+      "id": 2,
+      "brandName": "Brand Name",
+      "heading": "Heading",
+      "price": 80.95,
+      "originalPrice": 80.95,
+      "imageDesktop": "/images/product-462x710.webp",
+      "imageMobile": "/images/product-173.5x276.webp",
+      "imageAlt": "Product 2"
+    },
+    {
+      "id": 3,
+      "brandName": "Brand Name",
+      "heading": "Heading",
+      "price": 80.95,
+      "originalPrice": 80.95,
+      "imageDesktop": "/images/product-462x710.webp",
+      "imageMobile": "/images/product-173.5x276.webp",
+      "imageAlt": "Product 3"
+    },
+    {
+      "id": 4,
+      "brandName": "Brand Name",
+      "heading": "Heading",
+      "price": 80.95,
+      "originalPrice": 80.95,
+      "imageDesktop": "/images/product-462x710.webp",
+      "imageMobile": "/images/product-173.5x276.webp",
+      "imageAlt": "Product 4"
+    }
+  ]
+}

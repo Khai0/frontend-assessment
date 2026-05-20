@@ -1,0 +1,47 @@
+.headingBlock {
+  @apply relative w-full h-full text-white bg-black/50 flex flex-col px-3 pt-6 pb-10 md:grid md:p-0 md:grid-cols-[theme(spacing.hero-text-col)_1fr_1fr] md:grid-rows-[auto_auto] md:items-stretch;
+}
+
+.textContent {
+  @apply flex flex-col items-start gap-4 p-0 sm:w-full sm:min-h-[theme(spacing.heading-block-h)] sm:py-10 sm:pr-2.5 sm:pl-6;
+}
+
+.content {
+  @apply flex flex-col;
+}
+
+.eyebrow {
+  @apply block mb-2 tracking-[0] text-white font-pp font-semibold text-[10px] leading-[15px] md:font-sans md:font-bold md:text-[12px] md:leading-[14px];
+}
+
+.heroHeadline {
+  @apply text-white font-rb font-normal text-[36px] leading-[42px] md:font-sans md:text-[56px] md:leading-[64px];
+}
+
+.blurb {
+  @apply text-white font-pp font-normal text-[10px] leading-[15px] md:font-sans md:text-[12px] md:leading-[14px];
+}
+
+.buttonGroup {
+  @apply inline-flex gap-2;
+}
+
+.btn {
+  @apply px-6 py-3 font-pp font-semibold text-[12px] leading-[1.5] md:font-sans md:font-bold md:leading-[14px];
+}
+
+.btnPrimary {
+  @apply bg-white text-text-primary;
+}
+
+.btnSecondary {
+  @apply bg-transparent text-white ring-1 ring-inset ring-white;
+}
+
+.spacerLeft {
+  @apply hidden md:block md:w-full md:col-start-2 md:row-start-1;
+}
+
+.spacerRight {
+  @apply hidden md:block md:w-full md:col-start-3 md:row-start-1;
+}

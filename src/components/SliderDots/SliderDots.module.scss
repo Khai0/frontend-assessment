@@ -1,0 +1,16 @@
+.sliderDots {
+  @apply inset-x-0 bottom-4 flex items-center justify-center w-full gap-3 md:bottom-5;
+}
+
+.dot {
+  @apply relative w-2 h-2 p-0 rounded-full border-none bg-dot cursor-pointer transition-[background,transform] duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-[2px];
+
+  &::before {
+    content: "";
+    @apply absolute -inset-[10px];
+  }
+}
+
+.dotActive {
+  @apply bg-white;
+}

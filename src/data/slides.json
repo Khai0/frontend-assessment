@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "image": "/images/slide-1920x1080.webp",
+    "imageMobile": "/images/slide-375x698.webp",
+    "alt": "1920x1080 slide"
+  },
+  {
+    "id": 2,
+    "image": "/images/slide-1920x1080.webp",
+    "imageMobile": "/images/slide-375x698.webp",
+    "alt": "Slide 2"
+  },
+  {
+    "id": 3,
+    "image": "/images/slide-1920x1080.webp",
+    "imageMobile": "/images/slide-375x698.webp",
+    "alt": "Slide 3"
+  },
+  {
+    "id": 4,
+    "image": "/images/slide-1920x1080.webp",
+    "imageMobile": "/images/slide-375x698.webp",
+    "alt": "Slide 4"
+  },
+  {
+    "id": 5,
+    "image": "/images/slide-1920x1080.webp",
+    "imageMobile": "/images/slide-375x698.webp",
+    "alt": "Slide 5"
+  }
+]
