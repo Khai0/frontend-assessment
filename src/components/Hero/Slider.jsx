@@ -32,9 +32,11 @@ export default function Slider({ slides, current, onNavigate }) {
                 <source
                   media="(min-width: 769px)"
                   srcSet={slide.image}
+                  type="image/webp"
                 />
                 <img
                   src={slide.imageMobile}
+                  type="image/webp"
                   alt={slide.alt}
                   className={styles.image}
                   loading={index === 1 ? "eager" : "lazy"}
