@@ -23,10 +23,14 @@ export default function Slider({ slides, current, onNavigate }) {
           <div
             key={`${slide.id}-${index}`}
             className={styles.slide}
-            aria-hidden={index !== renderIndex + 1}
+            aria-hidden={!isActive}
+            inert={!isActive ? "" : undefined}
           >
             <picture>
-              <source media="(min-width: 769px)" srcSet={slide.image} />
+              <source 
+                media="(min-width: 769px)" 
+                srcSet={slide.image} 
+              />
               <img
                 src={slide.imageMobile}
                 alt={slide.alt}
