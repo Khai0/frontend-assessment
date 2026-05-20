@@ -5,6 +5,15 @@ A frontend assessment built with **React + Vite**, implementing two exercises ba
 ---
 
 Firstly Thanks for taking the time to review this submission.
+---
+
+## Live Demo
+ 
+| Route | URL |
+|-------|-----|
+| Home | https://frontend-assessment.khaiphan882002.workers.dev/ |
+
+---
 
 ## Tech Stack
 
