@@ -19,32 +19,35 @@ export default function Slider({ slides, current, onNavigate }) {
         style={{ transform: `translate3d(${-(renderIndex + 1) * 100}%, 0, 0)` }}
         onTransitionEnd={handleTransitionEnd}
       >
-        {extendedSlides.map((slide, index) => (
-          <div
-            key={`${slide.id}-${index}`}
-            className={styles.slide}
-            aria-hidden={!isActive}
-            inert={!isActive ? "" : undefined}
-          >
-            <picture>
-              <source 
-                media="(min-width: 769px)" 
-                srcSet={slide.image} 
-              />
-              <img
-                src={slide.imageMobile}
-                alt={slide.alt}
-                className={styles.image}
-                loading={index === 1 ? "eager" : "lazy"}
-                fetchPriority={index === 1 ? "high" : "auto"}
-              />
-            </picture>
+        {extendedSlides.map((slide, index) => {
+          const isActive = index === renderIndex + 1;
+          return (
+            <div
+              key={`${slide.id}-${index}`}
+              className={styles.slide}
+              aria-hidden={!isActive}
+              inert={!isActive ? true : undefined}
+            >
+              <picture>
+                <source
+                  media="(min-width: 769px)"
+                  srcSet={slide.image}
+                />
+                <img
+                  src={slide.imageMobile}
+                  alt={slide.alt}
+                  className={styles.image}
+                  loading={index === 1 ? "eager" : "lazy"}
+                  fetchPriority={index === 1 ? "high" : "auto"}
+                />
+              </picture>
 
-            <div className={styles.headingOverlay}>
-              <HeadingBlock content={heroContent} onNavigate={onNavigate} />
+              <div className={styles.headingOverlay}>
+                <HeadingBlock content={heroContent} onNavigate={onNavigate} />
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
