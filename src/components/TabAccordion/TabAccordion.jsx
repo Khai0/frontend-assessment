@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useMediaQuery } from "../../hooks/useMediaQuery";
+import { useMediaQuery } from "@uidotdev/usehooks";
 import styles from "./TabAccordion.module.scss";
 
 function AccordionItem({ item, index, isOpen, onToggle }) {
