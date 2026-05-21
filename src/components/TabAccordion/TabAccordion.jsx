@@ -1,5 +1,5 @@
-// TabAccordion.jsx
 import { useState } from "react";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 import styles from "./TabAccordion.module.scss";
 
 function AccordionItem({ item, index, isOpen, onToggle }) {
@@ -50,55 +50,66 @@ function AccordionItem({ item, index, isOpen, onToggle }) {
 }
 
 export default function TabAccordion({ items }) {
-  const [activeTab, setActiveTab] = useState(0);
-  const [activeAccordion, setActiveAccordion] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleAccordion = (index) => {
-    setActiveAccordion((prev) => (prev === index ? -1 : index));
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+
+  const handleTabClick = (index) => {
+    setActiveIndex(index);
   };
+
+  const handleAccordionToggle = (index) => {
+    setActiveIndex((prev) => (prev === index ? -1 : index));
+  };
+
+  if (isDesktop) {
+    return (
+      <section className={styles.wrapper}>
+        <div className={styles.tabs}>
+          <div className={styles.tabList} role="tablist">
+            {items.map((item, i) => (
+              <button
+                key={item.title}
+                role="tab"
+                aria-selected={activeIndex === i}
+                aria-controls={`panel-${i}`}
+                id={`tab-${i}`}
+                className={`${styles.tabBtn} ${activeIndex === i ? styles.tabBtnActive : ""}`}
+                onClick={() => handleTabClick(i)}
+              >
+                {item.title}
+                <span className={styles.tabIndicator} />
+              </button>
+            ))}
+          </div>
+
+          <div className={styles.tabPanels}>
+            {items.map((item, i) => (
+              <div
+                key={item.title}
+                id={`panel-${i}`}
+                role="tabpanel"
+                aria-labelledby={`tab-${i}`}
+                className={`${styles.tabPanel} ${activeIndex === i ? styles.tabPanelActive : ""}`}
+                dangerouslySetInnerHTML={{ __html: item.content }}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className={styles.wrapper}>
-      <div className={styles.tabs}>
-        <div className={styles.tabList} role="tablist">
-          {items.map((item, i) => (
-            <button
-              key={item.title}
-              role="tab"
-              aria-selected={activeTab === i}
-              aria-controls={`panel-${i}`}
-              id={`tab-${i}`}
-              className={`${styles.tabBtn} ${activeTab === i ? styles.tabBtnActive : ""}`}
-              onClick={() => setActiveTab(i)}
-            >
-              {item.title}
-              <span className={styles.tabIndicator} />
-            </button>
-          ))}
-        </div>
-
-        <div className={styles.tabPanels}>
-          {items.map((item, i) => (
-            <div
-              key={item.title}
-              id={`panel-${i}`}
-              role="tabpanel"
-              aria-labelledby={`tab-${i}`}
-              className={`${styles.tabPanel} ${activeTab === i ? styles.tabPanelActive : ""}`}
-              dangerouslySetInnerHTML={{ __html: item.content }}
-            />
-          ))}
-        </div>
-      </div>
-
       <div className={styles.accordion}>
         {items.map((item, i) => (
           <AccordionItem
             key={item.title}
             item={item}
             index={i}
-            isOpen={activeAccordion === i}
-            onToggle={handleAccordion}
+            isOpen={activeIndex === i}
+            onToggle={handleAccordionToggle}
           />
         ))}
       </div>
