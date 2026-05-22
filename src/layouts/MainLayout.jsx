@@ -1,9 +1,7 @@
-import styles from './MainLayout.module.scss'
-
 export default function MainLayout({ children }) {
   return (
-    <div className={styles.mainLayout}>
-      <main className={styles.main}>{children}</main>
+    <div className="min-h-screen w-full">
+      <main className="mx-auto w-full">{children}</main>
     </div>
-  )
+  );
 }
