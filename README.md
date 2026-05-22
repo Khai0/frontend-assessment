@@ -1,6 +1,6 @@
 # Frontend Assessment
 
-A frontend assessment built with React + Vite, implementing two exercises based on the provided Figma design.
+This repository contains my submission for the frontend assessment, built with React + Vite and implementing the required exercises based on the provided Figma design.
 
 ---
 
@@ -10,9 +10,9 @@ Thanks for taking the time to review this submission.
 
 ## Live Demo
 
-| Route | URL |
-|-------|-----|
-| Home | https://frontend-assessment.khaiphan882002.workers.dev/ |
+| Route | URL                                                     |
+| ----- | ------------------------------------------------------- |
+| Home  | https://frontend-assessment.khaiphan882002.workers.dev/ |
 
 ---
 
@@ -86,6 +86,75 @@ src/
 
 ---
 
+## Component Architecture
+
+### Component Structure
+
+The project follows a component-based architecture to improve maintainability and reusability.
+
+- `pages/` → route-level pages
+- `components/` → reusable UI components
+- `hooks/` → reusable logic
+- `utils/` → helper functions
+- `data/` → static JSON data
+
+### Responsive Strategy
+
+- Tailwind responsive utilities are used for layout adaptation.
+- `useMediaQuery` switches between Tabs and Accordion layouts.
+- `picture` element is used for responsive images.
+
+### State Management
+
+React local state (`useState`) is sufficient for this project scope and avoids unnecessary global state complexity.
+
+---
+
+## Data Sources
+
+- **Exercise 1** reads from `slides.json` and `products.json`
+- **Exercise 2** reads from `data.json`
+
+---
+
+## Hero / Slider
+
+| Component       | Description                                                                           |
+| --------------- | ------------------------------------------------------------------------------------- |
+| `Hero`          | Wrapper for Exercise 1. Manages slider state and connects the child components below. |
+| `Slider`        | Carousel (Swiper) with autoplay, loop, swipe support, and responsive images.          |
+| `HeadingBlock`  | Displays eyebrow text, heading, blurb, and CTA buttons.                               |
+| `SliderButtons` | Previous / Next navigation buttons.                                                   |
+| `SliderDots`    | Pagination dots, synchronized with the current slide index.                           |
+
+---
+
+## Product Listing
+
+| Component        | Description                                                                            |
+| ---------------- | -------------------------------------------------------------------------------------- |
+| `ProductGrid`    | Product grid layout: 2 columns on mobile, 4 columns on desktop.                        |
+| `ArcProductCard` | Product card displaying image, brand, product name, current price, and original price. |
+
+---
+
+## Tabs / Accordion
+
+| Component      | Description                                                                                                  |
+| -------------- | ------------------------------------------------------------------------------------------------------------ |
+| `TabAccordion` | Controller for Exercise 2. Automatically switches between Tab mode (≥ 768 px) and Accordion mode (< 768 px). |
+| `Tabs`         | Desktop tab interface with `role="tablist"` and `role="tabpanel"` for accessibility.                         |
+| `Accordion`    | Mobile accordion; only one item can be open at a time.                                                       |
+
+---
+
+## Layout / Navigation
+
+| Component          | Description                              |
+| ------------------ | ---------------------------------------- |
+| `MainLayout`       | Page shell used across exercise routes.  |
+| `BackToHomeButton` | Fixed button that navigates back to `/`. |
+
 ## Running Tests
 
 ```bash
@@ -103,36 +172,42 @@ pnpm run test:ui
 
 ## Exercises
 
-### Exercise 1 - Responsive Page
+### Exercise 1 — Responsive Page
 
-- Matches the Figma design as closely as possible
-- Fully responsive on mobile and desktop
-- Hero slider with arrows, dots, and swipe support
-- Responsive images using `picture` and media sources
-- Product grid: 2 columns on mobile, 4 columns on desktop
+- [x] Matches the provided Figma design
+- [x] Fully responsive layout
+- [x] Hero slider with arrows and dots
+- [x] Swipe support
+- [x] Responsive images using `picture`
+- [x] Product grid responsive layout
 
-### Exercise 2 - Tabs and Accordion
+#### Implemented Features
 
-- Desktop: rendered as tabs
-- Mobile: rendered as accordion
-- Only one item open at a time
-- First item open by default
+- [x] Desktop view renders as **Tabs**
+- [x] Mobile view renders as **Accordion**
+- [x] Only one item can be expanded at a time
+- [x] First item is expanded by default
+- [x] Responsive switching using `useMediaQuery`
 
 ---
 
-## Figma Design
+## Design Reference
 
-[View Figma](https://www.figma.com/design/OGS3UnHSQ22l0rXXsY7wnU/FE-Test?node-id=0-1&p=f&m=dev)
+Figma design used for implementation:
+
+[View Figma Design](https://www.figma.com/design/OGS3UnHSQ22l0rXXsY7wnU/FE-Test?node-id=0-1&p=f&m=dev)
 
 ---
 
 ## Bonus
 
 ```js
-("b" + "a" + + "a" + "a").toLowerCase() === "banana";
+("b" + "a" + +"a" + "a").toLowerCase() === "banana";
 ```
 
-Why it works:
+### Explanation
+
+The expression works because JavaScript performs implicit type coercion.
 
 - `+"a"` becomes `NaN`
 - `"b" + "a"` becomes `"ba"`
