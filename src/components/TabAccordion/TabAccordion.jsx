@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useMediaQuery } from "@uidotdev/usehooks";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 import { Tabs } from "./Tabs.jsx";
 import { Accordion } from "./Accordion.jsx";
 

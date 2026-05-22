@@ -3,7 +3,7 @@
   "products": [
     {
       "id": 1,
-      "url": "/products/product-1",
+      "url": "#",
       "brandName": "Brand Name",
       "heading": "Heading",
       "price": 80.95,
@@ -14,7 +14,7 @@
     },
     {
       "id": 2,
-      "url": "/products/product-2",
+      "url": "#",
       "brandName": "Brand Name",
       "heading": "Heading",
       "price": 80.95,
@@ -25,7 +25,7 @@
     },
     {
       "id": 3,
-      "url": "/products/product-3",
+      "url": "#",
       "brandName": "Brand Name",
       "heading": "Heading",
       "price": 80.95,
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "url": "/products/product-4",
+      "url": "#",
       "brandName": "Brand Name",
       "heading": "Heading",
       "price": 80.95,

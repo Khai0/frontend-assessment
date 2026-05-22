@@ -6,12 +6,33 @@ import HomePage from "./pages/HomePage";
 import Exercise1 from "./pages/Exercise1";
 import Exercise2 from "./pages/Exercise2";
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
+function ScrollManager() {
+  const { hash, pathname } = useLocation();
 
   useEffect(() => {
+    if (hash) {
+      const targetId = hash.replace("#", "");
+
+      if (!targetId) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        requestAnimationFrame(() => {
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        });
+        return;
+      }
+    }
+
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [pathname]);
+  }, [pathname, hash]);
 
   return null;
 }
@@ -28,7 +49,7 @@ function ExerciseRoute({ children }) {
 export default function App() {
   return (
     <>
-      <ScrollToTop />
+      <ScrollManager />
 
       <Routes>
         <Route path="/" element={<HomePage />} />

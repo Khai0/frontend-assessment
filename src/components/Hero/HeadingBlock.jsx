@@ -1,34 +1,7 @@
-import { useNavigate } from "react-router-dom";
+import clsx from "clsx";
 
-const ACTION_TO_PATH = {
-  ex1: "/exercise1",
-  exercise1: "/exercise1",
-  ex2: "/exercise2",
-  exercise2: "/exercise2",
-  home: "/",
-};
-
-function resolveActionPath(action) {
-  if (!action) return "/";
-
-  const normalizedAction = String(action).trim().toLowerCase();
-
-  if (ACTION_TO_PATH[normalizedAction]) {
-    return ACTION_TO_PATH[normalizedAction];
-  }
-
-  return normalizedAction.startsWith("/")
-    ? normalizedAction
-    : `/${normalizedAction}`;
-}
-
-export default function HeadingBlock({ content }) {
+export default function HeadingBlock({ content, onNavigate = () => {} }) {
   const { eyebrow, heading, blurb, buttons } = content;
-  const navigate = useNavigate();
-
-  const handleButtonClick = (action) => {
-    navigate(resolveActionPath(action));
-  };
 
   return (
     <div className="relative w-full h-full text-white bg-black/50 flex flex-col px-3 pt-6 pb-10 md:grid md:p-0 md:grid-cols-[theme(spacing.hero-text-col)_1fr_1fr] md:grid-rows-[auto_auto] md:items-stretch">
@@ -47,14 +20,13 @@ export default function HeadingBlock({ content }) {
 
         <div className="inline-flex gap-2">
           {buttons.map((btn) => (
-            <button
-              type="button"
+            <a
               key={btn.id}
+              href={btn.url}
               className="px-6 py-3 font-pp font-semibold text-[12px] leading-[1.5] md:font-sans md:font-bold md:leading-[14px] transition-colors duration-200 bg-transparent text-white ring-1 ring-inset ring-white hover:bg-white hover:text-text-primary"
-              onClick={() => handleButtonClick(btn.action)}
             >
               {btn.label}
-            </button>
+            </a>
           ))}
         </div>
       </div>
