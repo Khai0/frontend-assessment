@@ -14,7 +14,7 @@ export default function ArcProductCard({ product }) {
 
   return (
     <a href={url} className="block">
-      <article className="flex flex-col min-w-0 box-border shadow-card-mobile overflow-hidden bg-text-frame2 hover:shadow-[0_4px_16px_rgba(0,0,0,0.15)] md:shadow-card">
+      <article className="flex flex-col min-w-0 box-border shadow-card-mobile overflow-hidden bg-text-frame2 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_12px_32px_rgba(0,0,0,0.18)] will-change-transform md:shadow-card">
         <div className="aspect-[173.5/276] relative w-full overflow-hidden md:aspect-[456/710]">
           <div className="absolute inset-x-0 top-0 z-[2] flex flex-col">
             <div aria-hidden="true" />
