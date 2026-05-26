@@ -47,8 +47,6 @@ pnpm dev
 # Build for production
 pnpm build
 
-# Run tests
-pnpm test
 
 # Lint code
 pnpm lint
@@ -68,8 +66,6 @@ src/
 |   |-- SliderDots/          # Slider dot indicators
 |   `-- TabAccordion/        # Tabs (desktop) / Accordion (mobile)
 |-- data/                    # Static JSON data
-|-- hooks/                   # Custom React hooks
-|   `-- useMediaQuery.js
 |-- layouts/
 |   `-- MainLayout.jsx
 |-- pages/
@@ -94,7 +90,6 @@ The project follows a component-based architecture to improve maintainability an
 
 - `pages/` → route-level pages
 - `components/` → reusable UI components
-- `hooks/` → reusable logic
 - `utils/` → helper functions
 - `data/` → static JSON data
 
@@ -154,21 +149,6 @@ React local state (`useState`) is sufficient for this project scope and avoids u
 | ------------------ | ---------------------------------------- |
 | `MainLayout`       | Page shell used across exercise routes.  |
 | `BackToHomeButton` | Fixed button that navigates back to `/`. |
-
-## Running Tests
-
-```bash
-# Watch mode
-pnpm test
-
-# Run once
-pnpm test -- --run
-
-# Interactive UI
-pnpm run test:ui
-```
-
----
 
 ## Exercises
 
