@@ -1,6 +1,4 @@
-import clsx from "clsx";
-
-export default function HeadingBlock({ content, onNavigate = () => {} }) {
+export default function HeadingBlock({ content }) {
   const { eyebrow, heading, blurb, buttons } = content;
 
   return (

@@ -18,7 +18,6 @@ export function Tabs({ items, activeIndex, onTabClick }) {
             className="group relative overflow-hidden px-7 py-[14px] border-none bg-transparent font-pp text-[15px] font-medium text-text-muted cursor-pointer hover:text-text-primary hover:-translate-y-[1px] transition-[color,transform] duration-200 motion-reduce:transition-none data-[active=true]:font-bold data-[active=true]:text-heading-bg"
             onClick={() => onTabClick(i)}
           >
-            {/* Giữ width cố định khi bold để không bị giật layout */}
             <span
               className="invisible font-bold block h-0 overflow-hidden"
               aria-hidden="true"
