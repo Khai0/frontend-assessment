@@ -22,7 +22,7 @@
     "hero": {
       "eyebrow": "Collection",
       "heading": "Explore Our Products",
-      "blurb": "Discover a curated selection of premium items designed to elevate your everyday experience.",
+      "blurb": "Your goal is to translate the provided Figma designs into a living, functional interface. We value pixel-perfection; your output should match the design specifications exactly in terms of colour, spacing, typography, and visual hierarchy.",
       "buttons": [
         { "id": 1, "label": "Browse Now", "variant": "primary", "url": "#" },
         { "id": 2, "label": "Learn More", "variant": "secondary", "url": "#" }
@@ -37,7 +37,7 @@
     "hero": {
       "eyebrow": "New Arrivals",
       "heading": "Fresh Drops This Week",
-      "blurb": "Be the first to get your hands on our latest releases, handpicked just for you.",
+      "blurb": "Your goal is to translate the provided Figma designs into a living, functional interface. We value pixel-perfection; your output should match the design specifications exactly in terms of colour, spacing, typography, and visual hierarchy.",
       "buttons": [
         { "id": 1, "label": "Shop New", "variant": "primary", "url": "#" },
         { "id": 2, "label": "View All", "variant": "secondary", "url": "#" }
@@ -51,8 +51,8 @@
     "alt": "Slide 4",
     "hero": {
       "eyebrow": "Limited Edition",
-      "heading": "Exclusive Deals Just for You",
-      "blurb": "Take advantage of our limited-time offers before they're gone. Quality you can trust, prices you'll love.",
+      "heading": "Exclusive Deals",
+      "blurb": "Your goal is to translate the provided Figma designs into a living, functional interface. We value pixel-perfection; your output should match the design specifications exactly in terms of colour, spacing, typography, and visual hierarchy.",
       "buttons": [
         { "id": 1, "label": "Grab Deal", "variant": "primary", "url": "#" },
         { "id": 2, "label": "See More", "variant": "secondary", "url": "#" }
@@ -67,7 +67,7 @@
     "hero": {
       "eyebrow": "Our Story",
       "heading": "Built With Passion",
-      "blurb": "We started with a simple idea: great design should be accessible to everyone. Join thousands of happy customers worldwide.",
+      "blurb": "Your goal is to translate the provided Figma designs into a living, functional interface. We value pixel-perfection; your output should match the design specifications exactly in terms of colour, spacing, typography, and visual hierarchy.",
       "buttons": [
         { "id": 1, "label": "About Us", "variant": "primary", "url": "#" },
         { "id": 2, "label": "Get Started", "variant": "secondary", "url": "#" }
