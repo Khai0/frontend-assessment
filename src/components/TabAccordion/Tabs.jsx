@@ -14,13 +14,19 @@ export function Tabs({ items, activeIndex, onTabClick }) {
             aria-selected={activeIndex === i}
             aria-controls={`panel-${i}`}
             id={`tab-${i}`}
-            className={clsx(
-              "group relative overflow-hidden px-7 py-[14px] border-none bg-transparent font-pp text-[15px] font-medium text-text-muted cursor-pointer hover:text-text-primary hover:-translate-y-[1px] transition-[color,transform] duration-200 motion-reduce:transition-none",
-              activeIndex === i && "font-bold text-heading-bg",
-            )}
+            data-active={activeIndex === i}
+            className="group relative overflow-hidden px-7 py-[14px] border-none bg-transparent font-pp text-[15px] font-medium text-text-muted cursor-pointer hover:text-text-primary hover:-translate-y-[1px] transition-[color,transform] duration-200 motion-reduce:transition-none data-[active=true]:font-bold data-[active=true]:text-heading-bg"
             onClick={() => onTabClick(i)}
           >
-            {item.title}
+            {/* Giữ width cố định khi bold để không bị giật layout */}
+            <span
+              className="invisible font-bold block h-0 overflow-hidden"
+              aria-hidden="true"
+            >
+              {item.title}
+            </span>
+            <span>{item.title}</span>
+
             <span
               className={clsx(
                 "absolute bottom-[-2px] left-0 w-full h-[2px] bg-heading-bg origin-left transition-transform duration-[350ms] ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none",

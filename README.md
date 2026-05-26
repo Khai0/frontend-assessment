@@ -10,9 +10,11 @@ Thanks for taking the time to review this submission.
 
 ## Live Demo
 
-| Route | URL                                                     |
-| ----- | ------------------------------------------------------- |
-| Home  | https://frontend-assessment.khaiphan882002.workers.dev/ |
+| Route     | URL                                                              |
+| --------- | ---------------------------------------------------------------- |
+| Home      | https://frontend-assessment.khaiphan882002.workers.dev/          |
+| Exercise1 | https://frontend-assessment.khaiphan882002.workers.dev/exercise1 |
+| Exercise2 | https://frontend-assessment.khaiphan882002.workers.dev/exercise2 |
 
 ---
 
@@ -161,7 +163,7 @@ React local state (`useState`) is sufficient for this project scope and avoids u
 - [x] Responsive images using `picture`
 - [x] Product grid responsive layout
 
-#### Implemented Features
+### Exercise 2
 
 - [x] Desktop view renders as **Tabs**
 - [x] Mobile view renders as **Accordion**
