@@ -5,6 +5,7 @@ import productsData from "../data/products.json";
 export default function Exercise1() {
   return (
     <>
+      <h1 className="sr-only">Exercise 1</h1>
       <Hero />
       <ProductGrid
         sectionHeading={productsData.sectionHeading}

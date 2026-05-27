@@ -11,26 +11,26 @@ export default function TabAccordion({ items }) {
     if (isDesktop && activeIndex < 0) {
       setActiveIndex(0);
     }
-  }, [isDesktop]);
+  }, [isDesktop, activeIndex]);
 
   const handleToggle = (index) =>
     setActiveIndex((prev) => (prev === index ? -1 : index));
 
-  return isDesktop ? (
-    <section className="w-full max-w-[1200px] mx-auto px-6 py-12">
-      <Tabs
-        items={items}
-        activeIndex={activeIndex}
-        onTabClick={setActiveIndex}
-      />
-    </section>
-  ) : (
-    <section className="w-full max-w-[1200px] mx-auto px-6 py-12">
-      <Accordion
-        items={items}
-        activeIndex={activeIndex}
-        onToggle={handleToggle}
-      />
+  return (
+    <section className="tab-accordion w-full max-w-[1200px] mx-auto px-6 py-12">
+      {isDesktop ? (
+        <Tabs
+          items={items}
+          activeIndex={activeIndex}
+          onTabClick={setActiveIndex}
+        />
+      ) : (
+        <Accordion
+          items={items}
+          activeIndex={activeIndex}
+          onToggle={handleToggle}
+        />
+      )}
     </section>
   );
 }

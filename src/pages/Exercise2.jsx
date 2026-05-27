@@ -3,16 +3,20 @@ import data from "../data/data.json";
 
 export default function Exercise2() {
   return (
-    <div className="min-h-screen bg-gray-bg pb-16">
-      <div className="bg-blue-bg px-6 pt-12 pb-10 text-center">
-        <h1 className="font-pp text-[2rem] font-bold text-white mb-2 lg:text-[2.5rem]">
+    <div className="exercise min-h-screen bg-gray-bg pb-16">
+      <div className="exercise__header px-6 pt-12 pb-10 text-center bg-blue-bg">
+        <h1 className="exercise__title mb-2 font-pp text-[2rem] font-bold text-white lg:text-[2.5rem]">
           Exercise 2
         </h1>
-        <p className="font-rb text-[14px] text-white/65 tracking-[0.04em] uppercase">
+
+        <p className="exercise__label font-rb text-[14px] uppercase tracking-[0.04em] text-white/65">
           Tabs on desktop · Accordion on mobile
         </p>
       </div>
-      <TabAccordion items={data} />
+
+      <div className="exercise__body">
+        <TabAccordion items={data} />
+      </div>
     </div>
   );
 }

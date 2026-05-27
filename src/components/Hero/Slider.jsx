@@ -5,11 +5,7 @@ import HeadingBlock from "./HeadingBlock";
 
 export default function Slider({ slides, onActiveIndexChange, onSwiperReady }) {
   return (
-    <div
-      className="relative w-full overflow-hidden bg-hero-bg aspect-[375/698] lg:aspect-[1920/1080]"
-      role="region"
-      aria-label="Hero image slider"
-    >
+    <div className="slider relative w-full aspect-[375/698] overflow-hidden bg-hero-bg lg:aspect-[1920/1080]">
       <Swiper
         modules={[Autoplay, A11y]}
         loop={slides.length > 1}
@@ -30,12 +26,15 @@ export default function Slider({ slides, onActiveIndexChange, onSwiperReady }) {
           prevSlideMessage: "Previous slide",
           nextSlideMessage: "Next slide",
         }}
-        className="h-full w-full"
+        className="slider__swiper w-full h-full"
         onSwiper={onSwiperReady}
         onRealIndexChange={(swiper) => onActiveIndexChange(swiper.realIndex)}
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={slide.id} className="relative h-full select-none">
+          <SwiperSlide
+            key={slide.id}
+            className="slider__slide relative h-full select-none"
+          >
             <picture>
               <source
                 media="(min-width: 769px)"
@@ -50,15 +49,15 @@ export default function Slider({ slides, onActiveIndexChange, onSwiperReady }) {
               <img
                 src={slide.imageMobile}
                 alt={slide.alt}
-                className="h-full w-full object-cover pointer-events-none"
+                className="slider__img w-full h-full object-cover pointer-events-none"
                 loading={index === 0 ? "eager" : "lazy"}
-                fetchPriority={index === 0 ? "high" : "auto"}
+                fetchPriority={index === 0 ? "high" : undefined}
                 draggable={false}
               />
             </picture>
 
-            <div className="absolute inset-x-0 bottom-0 z-[5]">
-              <HeadingBlock content={slide.hero} />
+            <div className="slider__content absolute inset-x-0 bottom-0 z-[5]">
+              <HeadingBlock content={slide.hero} headingAs="h1" />
             </div>
           </SwiperSlide>
         ))}

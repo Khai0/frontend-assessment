@@ -15,22 +15,27 @@ export default function Hero() {
   return (
     <section
       id="exercise1-top"
-      className="w-full scroll-mt-0"
+      className="hero w-full"
       aria-label="Featured products"
+      aria-roledescription="carousel"
     >
-      <div className="relative w-full">
+      <div aria-live="polite" aria-atomic="true" className="sr-only">
+        {`Slide ${current + 1} of ${slidesData.length}`}
+      </div>
+
+      <div className="hero__stage relative w-full">
         <Slider
           slides={slidesData}
           onActiveIndexChange={setCurrent}
           onSwiperReady={(swiper) => {
             swiperRef.current = swiper;
-            setCurrent(swiper.realIndex);
+            if (swiper.realIndex !== 0) setCurrent(swiper.realIndex);
           }}
         />
 
         <SliderButtons onPrev={handlePrev} onNext={handleNext} />
 
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 md:bottom-5">
+        <div className="hero__dots absolute left-1/2 z-10 bottom-4 -translate-x-1/2 md:bottom-5">
           <SliderDots
             slides={slidesData}
             current={current}
