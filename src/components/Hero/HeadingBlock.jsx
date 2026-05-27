@@ -21,8 +21,10 @@ export default function HeadingBlock({
           <span
             className="
               heading-block__eyebrow block mb-2
-              font-pp font-semibold text-[10px] leading-[15px] tracking-[0] text-white
-              md:font-sans md:font-bold md:text-[12px] md:leading-[14px] "
+              type-ui-xs-responsive
+              font-pp font-semibold tracking-[0] text-white
+              md:font-sans md:font-bold
+            "
           >
             {eyebrow}
           </span>
@@ -30,8 +32,10 @@ export default function HeadingBlock({
           <HeadingTag
             className="
               heading-block__heading
-              font-rb font-normal text-[36px] leading-[42px] text-white
-              md:font-sans md:text-[56px] md:leading-[64px]"
+              type-hero-heading
+              font-rb font-normal text-white
+              md:font-sans
+            "
           >
             {heading}
           </HeadingTag>
@@ -40,8 +44,10 @@ export default function HeadingBlock({
         <p
           className="
             heading-block__blurb
-            font-pp font-normal text-[10px] leading-[15px] text-white
-            md:font-sans md:text-[12px] md:leading-[14px]"
+            type-ui-xs-responsive
+            font-pp font-normal text-white
+            md:font-sans
+          "
         >
           {blurb}
         </p>
@@ -53,10 +59,12 @@ export default function HeadingBlock({
               href={btn.url}
               className="
                 heading-block__btn inline-block px-6 py-3
-                font-pp font-semibold text-[12px] leading-[1.5] text-white
+                type-button-label
+                font-pp font-semibold text-white
                 bg-transparent ring-1 ring-inset ring-white
                 transition-colors duration-200 hover:bg-white hover:text-text-primary
-                md:font-sans md:font-bold md:leading-[14px]"
+                md:font-sans md:font-bold
+              "
             >
               {btn.label}
             </a>

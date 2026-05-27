@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { Link } from "react-router-dom";
 
 const exercises = [
@@ -27,84 +28,80 @@ function HomeCard({ cta, description, featured, index, note, path, title }) {
   return (
     <Link
       to={path}
-      className={[
+      className={clsx(
         "home-card group flex flex-col min-h-[260px]",
-
         "p-6 md:min-h-[300px] md:p-8",
-
         "border transition duration-200",
-
         "hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-bg",
-
         featured
           ? "home-card--featured border-blue-bg bg-blue-bg text-white"
           : "border-card-border bg-white text-text-primary",
-      ].join(" ")}
+      )}
     >
       <div className="home-card__header flex items-start justify-between gap-4">
         <span
-          className={[
+          className={clsx(
             "home-card__index font-sans text-xs font-bold tracking-[0.2em]",
             featured ? "text-white/70" : "text-text-muted",
-          ].join(" ")}
+          )}
         >
           {index}
         </span>
 
         <span
-          className={[
+          className={clsx(
             "home-card__badge inline-flex border px-3 py-1",
-            "font-sans text-[11px] font-bold uppercase tracking-[0.18em]",
+            "type-home-card-badge font-sans font-bold uppercase tracking-[0.18em]",
             featured
               ? "border-white/30 text-white/80"
               : "border-border-light text-content-muted",
-          ].join(" ")}
+          )}
         >
           {featured ? "Main" : "Extra"}
         </span>
       </div>
 
-      <h2 className="home-card__title mt-10 font-sans text-[2rem] font-bold leading-none tracking-[-0.04em]">
+      <h2 className="home-card__title type-home-card-title mt-10 font-sans font-bold tracking-[-0.04em]">
         {title}
       </h2>
 
       <p
-        className={[
+        className={clsx(
           "home-card__description mt-4 max-w-[26rem]",
           "font-rb text-base leading-7",
           featured ? "text-white/80" : "text-content-body",
-        ].join(" ")}
+        )}
       >
         {description}
       </p>
 
       <p
-        className={[
+        className={clsx(
           "home-card__note mt-3 font-rb text-sm",
           featured ? "text-white/55" : "text-content-muted",
-        ].join(" ")}
+        )}
       >
         {note}
       </p>
 
       <div className="home-card__footer mt-auto flex items-end justify-between gap-4 pt-10">
         <span
-          className={[
+          className={clsx(
             "home-card__path font-sans text-xs font-bold tracking-[0.14em]",
             featured ? "text-white/55" : "text-text-muted",
-          ].join(" ")}
+          )}
         >
           {path}
         </span>
 
         <span
-          className={[
+          className={clsx(
             "home-card__cta inline-flex items-center gap-2 border-b pb-1",
             "font-sans text-sm font-bold uppercase tracking-[0.12em]",
             featured
               ? "border-white text-white"
               : "border-text-frame2 text-text-frame2",
-          ].join(" ")}
+          )}
         >
           {cta}
           <span aria-hidden="true">+</span>
@@ -123,7 +120,7 @@ export default function HomePage() {
             Frontend test
           </span>
 
-          <h1 className="home__title mt-6 max-w-3xl font-sans text-[3rem] font-bold leading-[0.95] tracking-[-0.05em] text-text-primary sm:text-[4rem] lg:text-[4.75rem]">
+          <h1 className="home__title type-home-page-title mt-6 max-w-3xl font-sans font-bold tracking-[-0.05em] text-text-primary">
             Frontend Assessment
           </h1>
 

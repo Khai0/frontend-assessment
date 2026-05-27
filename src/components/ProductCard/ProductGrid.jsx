@@ -10,7 +10,7 @@ export default function ProductGrid({ sectionHeading, products }) {
       <div className="product-grid__inner w-full max-w-screen-2xl mx-auto px-3 pt-8 pb-8 md:px-6 md:pt-16 md:pb-16">
         <h2
           id="products-heading"
-          className="product-grid__heading block w-full px-3 mb-6 font-rb font-normal text-[32px] leading-[38px] text-center text-text-primary md:px-6 md:mb-12 md:font-sans md:text-[48px] md:leading-[1.15]"
+          className="product-grid__heading type-section-heading block w-full mb-6 px-3 text-center font-rb font-normal text-text-primary md:mb-12 md:px-6 md:font-sans"
         >
           {sectionHeading}
         </h2>
