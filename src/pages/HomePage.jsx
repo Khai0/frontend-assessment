@@ -51,7 +51,7 @@ function HomeCard({ cta, description, featured, index, note, path, title }) {
         <span
           className={clsx(
             "home-card__badge inline-flex border px-3 py-1",
-            "type-home-card-badge font-sans font-bold uppercase tracking-[0.18em]",
+            "type-home-card-badge uppercase tracking-[0.18em]",
             featured
               ? "border-white/30 text-white/80"
               : "border-border-light text-content-muted",
@@ -61,7 +61,7 @@ function HomeCard({ cta, description, featured, index, note, path, title }) {
         </span>
       </div>
 
-      <h2 className="home-card__title type-home-card-title mt-10 font-sans font-bold tracking-[-0.04em]">
+      <h2 className="home-card__title type-home-card-title mt-10 tracking-[-0.04em]">
         {title}
       </h2>
 
@@ -120,7 +120,7 @@ export default function HomePage() {
             Frontend test
           </span>
 
-          <h1 className="home__title type-home-page-title mt-6 max-w-3xl font-sans font-bold tracking-[-0.05em] text-text-primary">
+          <h1 className="home__title type-home-page-title mt-6 max-w-3xl tracking-[-0.05em] text-text-primary">
             Frontend Assessment
           </h1>
 

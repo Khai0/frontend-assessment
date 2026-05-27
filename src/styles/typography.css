@@ -1,104 +1,75 @@
-.type-ui-xs-responsive {
-  font-size: 10px;
-  line-height: 15px;
-}
-
-.type-price-xs-responsive {
-  font-size: 10px;
-  line-height: 14px;
-}
-
-.type-hero-heading {
-  font-size: 36px;
-  line-height: 42px;
-}
-
-.type-button-label {
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.type-section-heading {
-  font-size: 32px;
-  line-height: 38px;
-}
-
-.type-home-card-badge {
-  font-size: 11px;
-}
-
-.type-home-card-title {
-  font-size: 2rem;
-  line-height: 1;
-}
-
-.type-home-page-title {
-  font-size: 3rem;
-  line-height: 0.95;
-}
-
-.type-route-title {
-  font-size: 2rem;
-}
-
-.type-caption-sm {
-  font-size: 14px;
-}
-
-.type-label-md {
-  font-size: 15px;
-}
-
-.type-rich-text-sm p,
-.type-rich-text-sm li {
-  font-size: 14px;
-  line-height: 1.75;
-}
-
-.type-rich-text-md p,
-.type-rich-text-md li {
-  font-size: 15px;
-  line-height: 1.75;
-}
-
-@media (min-width: 640px) {
-  .type-home-page-title {
-    font-size: 4rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .type-ui-xs-responsive {
-    font-size: 12px;
-    line-height: 14px;
-  }
-
-  .type-price-xs-responsive {
-    font-size: 12px;
-    line-height: 14px;
+@layer components {
+  .type-hero-eyebrow {
+    @apply font-pp text-[10px]/[15px] font-semibold md:font-sans md:text-xs/[14px] md:font-bold;
   }
 
   .type-hero-heading {
-    font-size: 56px;
-    line-height: 64px;
+    @apply font-rb text-[36px]/[42px] font-normal md:font-sans md:text-[56px]/[64px];
+  }
+
+  .type-hero-blurb {
+    @apply font-pp text-[10px]/[15px] font-normal md:font-sans md:text-xs/[14px];
   }
 
   .type-button-label {
-    line-height: 14px;
+    @apply font-pp text-xs/[1.5] font-semibold md:font-sans md:text-xs/[14px] md:font-bold;
+  }
+
+  .type-product-brand {
+    @apply font-pp text-[10px]/[15px] font-medium md:font-sans md:text-xs/[14px] md:font-normal;
+  }
+
+  .type-product-heading {
+    @apply font-pp text-[10px]/[15px] font-normal md:font-sans md:text-xs/[14px];
+  }
+
+  .type-product-price {
+    @apply font-pp text-[10px]/[14px] font-normal md:font-sans md:text-xs/[14px];
+  }
+
+  .type-product-price-original {
+    @apply font-pp text-[10px]/[15px] font-normal md:font-sans md:text-xs/[14px];
   }
 
   .type-section-heading {
-    font-size: 48px;
-    line-height: 1.15;
+    @apply font-rb text-[32px]/[38px] font-normal md:font-sans md:text-[48px]/[1.15];
   }
-}
 
-@media (min-width: 1024px) {
+  .type-home-card-badge {
+    @apply font-sans text-[11px] font-bold;
+  }
+
+  .type-home-card-title {
+    @apply font-sans text-[2rem]/none font-bold;
+  }
+
   .type-home-page-title {
-    font-size: 4.75rem;
+    @apply font-sans text-[3rem]/[0.95] font-bold sm:text-[4rem]/[0.95] lg:text-[4.75rem]/[0.95];
   }
 
   .type-route-title {
-    font-size: 2.5rem;
+    @apply font-pp text-[2rem] font-bold lg:text-[2.5rem];
+  }
+
+  .type-caption-sm {
+    @apply font-rb text-[14px] font-normal;
+  }
+
+  .type-tab-label {
+    @apply font-pp text-[15px] font-medium;
+  }
+
+  .type-accordion-label {
+    @apply font-pp text-[15px] font-semibold;
+  }
+
+  .type-rich-text-sm p,
+  .type-rich-text-sm li {
+    @apply font-rb text-[14px]/[1.75];
+  }
+
+  .type-rich-text-md p,
+  .type-rich-text-md li {
+    @apply font-rb text-[15px]/[1.75];
   }
 }

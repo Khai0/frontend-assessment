@@ -21,9 +21,8 @@ export default function HeadingBlock({
           <span
             className="
               heading-block__eyebrow block mb-2
-              type-ui-xs-responsive
-              font-pp font-semibold tracking-[0] text-white
-              md:font-sans md:font-bold
+              type-hero-eyebrow
+              tracking-[0] text-white
             "
           >
             {eyebrow}
@@ -33,8 +32,7 @@ export default function HeadingBlock({
             className="
               heading-block__heading
               type-hero-heading
-              font-rb font-normal text-white
-              md:font-sans
+              text-white
             "
           >
             {heading}
@@ -44,9 +42,8 @@ export default function HeadingBlock({
         <p
           className="
             heading-block__blurb
-            type-ui-xs-responsive
-            font-pp font-normal text-white
-            md:font-sans
+            type-hero-blurb
+            text-white
           "
         >
           {blurb}
@@ -60,10 +57,9 @@ export default function HeadingBlock({
               className="
                 heading-block__btn inline-block px-6 py-3
                 type-button-label
-                font-pp font-semibold text-white
+                text-white
                 bg-transparent ring-1 ring-inset ring-white
                 transition-colors duration-200 hover:bg-white hover:text-text-primary
-                md:font-sans md:font-bold
               "
             >
               {btn.label}
