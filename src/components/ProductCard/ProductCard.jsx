@@ -51,8 +51,9 @@ export default function ProductCard({ product }) {
           <span
             className="
               block min-w-0 truncate
-              font-pp font-medium text-[10px] leading-[15px] text-white
-              md:font-sans md:font-normal md:text-[12px] md:leading-[14px]
+              type-ui-xs-responsive
+              font-pp font-medium text-white
+              md:font-sans md:font-normal
             "
           >
             {brandName}
@@ -64,8 +65,9 @@ export default function ProductCard({ product }) {
             <h3
               className="
                 block min-w-0 m-0 truncate
-                font-pp font-normal text-[10px] leading-[15px] text-white
-                md:font-sans md:text-[12px] md:leading-[14px]
+                type-ui-xs-responsive
+                font-pp font-normal text-white
+                md:font-sans
               "
             >
               {heading}
@@ -76,8 +78,9 @@ export default function ProductCard({ product }) {
             <span
               className="
                 product-card__price
-                font-pp font-normal text-[10px] leading-[14px] text-white
-                md:font-sans md:text-[12px]
+                type-price-xs-responsive
+                font-pp font-normal text-white
+                md:font-sans
               "
             >
               {formatPrice(price)}
@@ -87,8 +90,9 @@ export default function ProductCard({ product }) {
               aria-hidden="true"
               className="
                 product-card__price--original
-                font-pp font-normal text-[10px] leading-[15px] text-price-strikethrough line-through
-                md:font-sans md:text-[12px]
+                type-ui-xs-responsive
+                font-pp font-normal text-price-strikethrough line-through
+                md:font-sans
               "
             >
               {formatPrice(originalPrice)}

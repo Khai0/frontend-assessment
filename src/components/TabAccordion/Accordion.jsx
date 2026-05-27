@@ -19,7 +19,8 @@ function AccordionItem({ item, index, isOpen, onToggle }) {
           accordion__trigger flex items-center justify-between w-full
           px-5 py-4 border-none
           bg-white text-left
-          font-pp font-semibold text-[15px] text-text-primary
+          type-label-md
+          font-pp font-semibold text-text-primary
           cursor-pointer transition-[background,color] duration-200 motion-reduce:transition-none
         "
         aria-expanded={isOpen}
@@ -65,10 +66,10 @@ function AccordionItem({ item, index, isOpen, onToggle }) {
         <div className="accordion__overflow overflow-hidden">
           <div
             className="
-              accordion__content p-5
-              [&_p]:font-rb [&_p]:text-[14px] [&_p]:leading-[1.75] [&_p]:text-content-muted [&_p]:mb-[10px]
+              accordion__content type-rich-text-sm p-5
+              [&_p]:font-rb [&_p]:text-content-muted [&_p]:mb-[10px]
               [&_ul]:pl-[18px] [&_ul]:mt-[6px]
-              [&_li]:font-rb [&_li]:text-[14px] [&_li]:leading-[1.75] [&_li]:text-content-muted [&_li]:list-disc [&_li]:mb-1
+              [&_li]:font-rb [&_li]:text-content-muted [&_li]:list-disc [&_li]:mb-1
             "
             dangerouslySetInnerHTML={{ __html: sanitizeHtml(item.content) }}
           />

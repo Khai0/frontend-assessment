@@ -1,0 +1,104 @@
+.type-ui-xs-responsive {
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.type-price-xs-responsive {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.type-hero-heading {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.type-button-label {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.type-section-heading {
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.type-home-card-badge {
+  font-size: 11px;
+}
+
+.type-home-card-title {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.type-home-page-title {
+  font-size: 3rem;
+  line-height: 0.95;
+}
+
+.type-route-title {
+  font-size: 2rem;
+}
+
+.type-caption-sm {
+  font-size: 14px;
+}
+
+.type-label-md {
+  font-size: 15px;
+}
+
+.type-rich-text-sm p,
+.type-rich-text-sm li {
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.type-rich-text-md p,
+.type-rich-text-md li {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+@media (min-width: 640px) {
+  .type-home-page-title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .type-ui-xs-responsive {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .type-price-xs-responsive {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .type-hero-heading {
+    font-size: 56px;
+    line-height: 64px;
+  }
+
+  .type-button-label {
+    line-height: 14px;
+  }
+
+  .type-section-heading {
+    font-size: 48px;
+    line-height: 1.15;
+  }
+}
+
+@media (min-width: 1024px) {
+  .type-home-page-title {
+    font-size: 4.75rem;
+  }
+
+  .type-route-title {
+    font-size: 2.5rem;
+  }
+}
