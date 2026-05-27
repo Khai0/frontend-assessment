@@ -128,10 +128,10 @@ React local state (`useState`) is sufficient for this project scope and avoids u
 
 ## Product Listing
 
-| Component        | Description                                                                            |
-| ---------------- | -------------------------------------------------------------------------------------- |
-| `ProductGrid`    | Product grid layout: 2 columns on mobile, 4 columns on desktop.                        |
-| `ArcProductCard` | Product card displaying image, brand, product name, current price, and original price. |
+| Component     | Description                                                                            |
+| ------------- | -------------------------------------------------------------------------------------- |
+| `ProductGrid` | Product grid layout: 2 columns on mobile, 4 columns on desktop.                        |
+| `ProductCard` | Product card displaying image, brand, product name, current price, and original price. |
 
 ---
 
