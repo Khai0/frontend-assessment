@@ -59,28 +59,49 @@ pnpm lint
 ## Project Structure
 
 ```text
-src/
-|-- components/              # Reusable UI components
-|   |-- BackToHomeButton.jsx
-|   |-- Hero/                # Hero section + slider
-|   |-- Icons/               # SVG icons
-|   |-- ProductCard/         # Product grid and product cards
-|   |-- SliderDots/          # Slider dot indicators
-|   `-- TabAccordion/        # Tabs (desktop) / Accordion (mobile)
-|-- data/                    # Static JSON data
-|-- layouts/
-|   `-- MainLayout.jsx
-|-- pages/
-|   |-- Exercise1.jsx
-|   |-- Exercise2.jsx
-|   `-- HomePage.jsx
-|-- utils/
-|   `-- formatPrice.js
-|-- App.jsx
-|-- index.css
-|-- main.jsx
-`-- setupTests.js
+.
+|-- public/                     # Static assets served directly by Vite
+|-- src/
+|   |-- components/             # Reusable UI building blocks
+|   |   |-- BackToHomeButton.jsx
+|   |   |-- Hero/               # Hero banner, Swiper slider, heading block, nav buttons
+|   |   |-- Icons/              # Shared SVG/icon helpers
+|   |   |-- ProductCard/        # Product card and product grid components
+|   |   |-- SliderDots/         # Slider pagination dots
+|   |   `-- TabAccordion/       # Exercise 2 desktop tabs and mobile accordion
+|   |-- data/                   # Static JSON content for both exercises
+|   |   |-- data.json
+|   |   |-- products.json
+|   |   `-- slides.json
+|   |-- layouts/
+|   |   `-- MainLayout.jsx      # Shared page shell for exercise routes
+|   |-- pages/                  # Route-level pages
+|   |   |-- HomePage.jsx        # Entry page linking to each exercise
+|   |   |-- Exercise1.jsx       # Hero slider + product grid page
+|   |   `-- Exercise2.jsx       # Tabs / accordion page
+|   |-- styles/
+|   |   `-- typography.css      # Shared typography classes built with Tailwind @apply
+|   |-- utils/
+|   |   |-- formatPrice.js      # Price formatting helper
+|   |   `-- sanitize.js         # DOMPurify wrapper for safe HTML rendering
+|   |-- App.jsx                 # App routes and scroll handling
+|   |-- index.css               # Global styles and Tailwind entry
+|   |-- main.jsx                # React app bootstrap
+|   `-- setupTests.js           # Test setup
+|-- tailwind.config.js          # Tailwind theme tokens and custom config
+|-- vite.config.js              # Vite configuration
+`-- README.md
 ```
+
+### Structure Notes
+
+- `pages/` contains route components only; page-specific assembly happens here, while visual pieces stay inside `components/`.
+- `components/Hero/` groups everything related to the Exercise 1 hero carousel so slider logic and presentation stay close together.
+- `components/ProductCard/` isolates catalog UI for Exercise 1, making the grid and each card reusable and easier to test separately.
+- `components/TabAccordion/` keeps the Exercise 2 responsive pattern together: `Tabs` for desktop, `Accordion` for mobile, and `TabAccordion` as the controller.
+- `data/` stores mock content outside the UI so components stay presentation-focused.
+- `styles/typography.css` centralizes repeated text styles using Tailwind `@apply`, which keeps JSX class lists shorter and more consistent.
+- `utils/sanitize.js` is used before `dangerouslySetInnerHTML` so HTML content is filtered instead of rendered blindly.
 
 ---
 
